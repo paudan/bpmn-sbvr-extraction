@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:ns2="http://www.omg.org/spec/DD/20100524/DI" xmlns:ns3="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:ns4="http://www.omg.org/spec/DD/20100524/DC" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="eee_1045467100313_135436_1" name="Model" targetNamespace="http://www.omg.org/spec/BPMN/20100524/MODEL" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd">
+    <partnerRole name="Partner" id="_19_0_1_b0e02e4_1551364272088_128428_13557"/>
+    <process processType="None" isClosed="false" name="TestModel1" id="_19_0_1_b0e02e4_1550748923733_602980_13035">
+        <laneSet id="_19_0_1_b0e02e4_1550748975956_383479_13053_Ref-1_laneSet">
+            <lane name="provider" id="_19_0_1_b0e02e4_1550748975956_383479_13053">
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030643_853807_13308</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030636_715341_13302</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030643_834790_13306</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030636_214425_13298</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030636_190462_13304</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030636_565896_13299</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030636_343497_13301</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030636_955875_13297</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030636_358522_13300</flowNodeRef>
+                <flowNodeRef>_19_0_1_b0e02e4_1550749030643_911561_13307</flowNodeRef>
+            </lane>
+        </laneSet>
+        <task isForCompensation="false" startQuantity="1" completionQuantity="1" name="package order" id="_19_0_1_b0e02e4_1550749030636_955875_13297">
+            <incoming>_19_0_1_b0e02e4_1550749030646_914431_13319</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030646_248485_13318</outgoing>
+        </task>
+        <task isForCompensation="false" startQuantity="1" completionQuantity="1" name="apply VIP discount" id="_19_0_1_b0e02e4_1550749030636_214425_13298">
+            <incoming>_19_0_1_b0e02e4_1550749030643_497862_13313</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030643_479550_13315</outgoing>
+        </task>
+        <task isForCompensation="false" startQuantity="1" completionQuantity="1" name="order additional packaging" id="_19_0_1_b0e02e4_1550749030636_565896_13299">
+            <incoming>_19_0_1_b0e02e4_1550749030643_368813_13310</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030643_543825_13312</outgoing>
+        </task>
+        <task isForCompensation="false" startQuantity="1" completionQuantity="1" name="ship order" id="_19_0_1_b0e02e4_1550749030636_358522_13300">
+            <incoming>_19_0_1_b0e02e4_1550749030646_248485_13318</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030646_416768_13316</outgoing>
+        </task>
+        <task isForCompensation="false" startQuantity="1" completionQuantity="1" name="process order" id="_19_0_1_b0e02e4_1550749030636_343497_13301">
+            <incoming>_19_0_1_b0e02e4_1550749030643_82927_13311</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030646_790323_13317</outgoing>
+        </task>
+        <task isForCompensation="false" startQuantity="1" completionQuantity="1" name="register order" id="_19_0_1_b0e02e4_1550749030636_715341_13302">
+            <incoming>_19_0_1_b0e02e4_1550749030646_360680_13321</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030646_43911_13320</outgoing>
+        </task>
+        <inclusiveGateway gatewayDirection="Unspecified" name="Inclusive Gateway2" id="_19_0_1_b0e02e4_1550749030636_652046_13303">
+            <incoming>_19_0_1_b0e02e4_1550749030643_543825_13312</incoming>
+            <incoming>_19_0_1_b0e02e4_1550749030646_790323_13317</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030646_914431_13319</outgoing>
+        </inclusiveGateway>
+        <exclusiveGateway gatewayDirection="Unspecified" name="Exclusive Gateway2" id="_19_0_1_b0e02e4_1550749030636_190462_13304">
+            <incoming>_19_0_1_b0e02e4_1550749030643_352120_13309</incoming>
+            <incoming>_19_0_1_b0e02e4_1550749030643_479550_13315</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030643_759563_13314</outgoing>
+        </exclusiveGateway>
+        <inclusiveGateway default="_19_0_1_b0e02e4_1550749030643_82927_13311" gatewayDirection="Unspecified" name="Inclusive gateway 1" id="_19_0_1_b0e02e4_1550749030643_239698_13305">
+            <incoming>_19_0_1_b0e02e4_1550749030643_759563_13314</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030643_368813_13310</outgoing>
+            <outgoing>_19_0_1_b0e02e4_1550749030643_82927_13311</outgoing>
+        </inclusiveGateway>
+        <exclusiveGateway default="_19_0_1_b0e02e4_1550749030643_352120_13309" gatewayDirection="Unspecified" name="Exclusive Gateway1" id="_19_0_1_b0e02e4_1550749030643_834790_13306">
+            <incoming>_19_0_1_b0e02e4_1550749030646_43911_13320</incoming>
+            <outgoing>_19_0_1_b0e02e4_1550749030643_352120_13309</outgoing>
+            <outgoing>_19_0_1_b0e02e4_1550749030643_497862_13313</outgoing>
+        </exclusiveGateway>
+        <endEvent name="order is completed" id="_19_0_1_b0e02e4_1550749030643_911561_13307">
+            <incoming>_19_0_1_b0e02e4_1550749030646_416768_13316</incoming>
+        </endEvent>
+        <startEvent isInterrupting="true" name="order is received" id="_19_0_1_b0e02e4_1550749030643_853807_13308">
+            <outgoing>_19_0_1_b0e02e4_1550749030646_360680_13321</outgoing>
+            <messageEventDefinition id="_19_0_1_b0e02e4_1550749030643_853807_13308_Ref-1"/>
+        </startEvent>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030643_834790_13306" targetRef="_19_0_1_b0e02e4_1550749030636_190462_13304" name="" id="_19_0_1_b0e02e4_1550749030643_352120_13309"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030643_239698_13305" targetRef="_19_0_1_b0e02e4_1550749030636_565896_13299" name="additional packaging is required" id="_19_0_1_b0e02e4_1550749030643_368813_13310"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030643_239698_13305" targetRef="_19_0_1_b0e02e4_1550749030636_343497_13301" name="" id="_19_0_1_b0e02e4_1550749030643_82927_13311"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_565896_13299" targetRef="_19_0_1_b0e02e4_1550749030636_652046_13303" name="" id="_19_0_1_b0e02e4_1550749030643_543825_13312"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030643_834790_13306" targetRef="_19_0_1_b0e02e4_1550749030636_214425_13298" name="customer is VIP customer" id="_19_0_1_b0e02e4_1550749030643_497862_13313"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_190462_13304" targetRef="_19_0_1_b0e02e4_1550749030643_239698_13305" name="" id="_19_0_1_b0e02e4_1550749030643_759563_13314"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_214425_13298" targetRef="_19_0_1_b0e02e4_1550749030636_190462_13304" name="" id="_19_0_1_b0e02e4_1550749030643_479550_13315"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_358522_13300" targetRef="_19_0_1_b0e02e4_1550749030643_911561_13307" name="" id="_19_0_1_b0e02e4_1550749030646_416768_13316"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_343497_13301" targetRef="_19_0_1_b0e02e4_1550749030636_652046_13303" name="" id="_19_0_1_b0e02e4_1550749030646_790323_13317"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_955875_13297" targetRef="_19_0_1_b0e02e4_1550749030636_358522_13300" name="" id="_19_0_1_b0e02e4_1550749030646_248485_13318"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_652046_13303" targetRef="_19_0_1_b0e02e4_1550749030636_955875_13297" name="" id="_19_0_1_b0e02e4_1550749030646_914431_13319"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030636_715341_13302" targetRef="_19_0_1_b0e02e4_1550749030643_834790_13306" name="" id="_19_0_1_b0e02e4_1550749030646_43911_13320"/>
+        <sequenceFlow sourceRef="_19_0_1_b0e02e4_1550749030643_853807_13308" targetRef="_19_0_1_b0e02e4_1550749030636_715341_13302" name="" id="_19_0_1_b0e02e4_1550749030646_360680_13321"/>
+    </process>
+    <ns3:BPMNDiagram name="TestModel1" id="_19_0_1_b0e02e4_1550748923733_602980_13035_diagram_0">
+        <ns3:BPMNPlane bpmnElement="_19_0_1_b0e02e4_1550748923733_602980_13035" id="_19_0_1_b0e02e4_1550748923787_806448_13046">
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550748975956_383479_13053" isHorizontal="true" id="_19_0_1_b0e02e4_1550748976007_149319_13058">
+                <ns4:Bounds x="21.0" y="49.0" width="1487.0" height="241.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030646_360680_13321" id="_19_0_1_b0e02e4_1550749033553_169291_13446">
+                <ns2:waypoint x="108.0" y="223.0"/>
+                <ns2:waypoint x="140.0" y="223.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030643_853807_13308" id="_19_0_1_b0e02e4_1550749033553_837624_13429">
+                <ns4:Bounds x="84.0" y="211.0" width="25.0" height="25.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030646_43911_13320" id="_19_0_1_b0e02e4_1550749033553_763047_13445">
+                <ns2:waypoint x="260.0" y="223.0"/>
+                <ns2:waypoint x="294.0" y="223.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_715341_13302" id="_19_0_1_b0e02e4_1550749033553_359855_13423">
+                <ns4:Bounds x="140.0" y="198.0" width="120.0" height="50.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030643_352120_13309" id="_19_0_1_b0e02e4_1550749033553_634628_13434">
+                <ns2:waypoint x="334.0" y="223.0"/>
+                <ns2:waypoint x="539.0" y="223.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030643_497862_13313" id="_19_0_1_b0e02e4_1550749033553_176795_13438">
+                <ns2:waypoint x="314.0" y="203.0"/>
+                <ns2:waypoint x="314.0" y="126.0"/>
+                <ns2:waypoint x="399.0" y="126.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030643_834790_13306" isMarkerVisible="false" id="_19_0_1_b0e02e4_1550749033553_689793_13427">
+                <ns4:Bounds x="294.0" y="203.0" width="40.0" height="40.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030643_479550_13315" id="_19_0_1_b0e02e4_1550749033553_274491_13440">
+                <ns2:waypoint x="519.0" y="126.0"/>
+                <ns2:waypoint x="559.0" y="126.0"/>
+                <ns2:waypoint x="559.0" y="203.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_214425_13298" id="_19_0_1_b0e02e4_1550749033553_524887_13419">
+                <ns4:Bounds x="399.0" y="98.0" width="120.0" height="50.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030643_759563_13314" id="_19_0_1_b0e02e4_1550749033553_132222_13439">
+                <ns2:waypoint x="579.0" y="223.0"/>
+                <ns2:waypoint x="658.0" y="223.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_190462_13304" isMarkerVisible="false" id="_19_0_1_b0e02e4_1550749033553_244117_13425">
+                <ns4:Bounds x="539.0" y="203.0" width="40.0" height="40.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030643_543825_13312" id="_19_0_1_b0e02e4_1550749033553_156591_13437">
+                <ns2:waypoint x="911.0" y="109.0"/>
+                <ns2:waypoint x="993.0" y="109.0"/>
+                <ns2:waypoint x="993.0" y="203.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_565896_13299" id="_19_0_1_b0e02e4_1550749033553_867863_13420">
+                <ns4:Bounds x="791.0" y="84.0" width="120.0" height="50.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030646_790323_13317" id="_19_0_1_b0e02e4_1550749033553_796171_13442">
+                <ns2:waypoint x="904.0" y="224.0"/>
+                <ns2:waypoint x="974.0" y="224.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_343497_13301" id="_19_0_1_b0e02e4_1550749033553_55354_13422">
+                <ns4:Bounds x="784.0" y="198.0" width="120.0" height="50.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030646_248485_13318" id="_19_0_1_b0e02e4_1550749033553_448102_13443">
+                <ns2:waypoint x="1184.0" y="224.0"/>
+                <ns2:waypoint x="1239.0" y="224.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_955875_13297" id="_19_0_1_b0e02e4_1550749033553_145327_13418">
+                <ns4:Bounds x="1064.0" y="198.0" width="120.0" height="50.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030646_416768_13316" id="_19_0_1_b0e02e4_1550749033553_456172_13441">
+                <ns2:waypoint x="1359.0" y="223.0"/>
+                <ns2:waypoint x="1421.0" y="223.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_358522_13300" id="_19_0_1_b0e02e4_1550749033553_243235_13421">
+                <ns4:Bounds x="1239.0" y="198.0" width="120.0" height="50.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030643_911561_13307" id="_19_0_1_b0e02e4_1550749033553_369971_13428">
+                <ns4:Bounds x="1421.0" y="211.0" width="25.0" height="25.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030643_368813_13310" id="_19_0_1_b0e02e4_1550749033553_25274_13435">
+                <ns2:waypoint x="679.0" y="204.0"/>
+                <ns2:waypoint x="679.0" y="112.0"/>
+                <ns2:waypoint x="791.0" y="112.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030643_82927_13311" id="_19_0_1_b0e02e4_1550749033553_365618_13436">
+                <ns2:waypoint x="697.0" y="224.0"/>
+                <ns2:waypoint x="784.0" y="224.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030643_239698_13305" id="_19_0_1_b0e02e4_1550749033553_7522_13426">
+                <ns4:Bounds x="658.0" y="203.0" width="40.0" height="40.0"/>
+            </ns3:BPMNShape>
+            <ns3:BPMNEdge bpmnElement="_19_0_1_b0e02e4_1550749030646_914431_13319" id="_19_0_1_b0e02e4_1550749033553_492224_13444">
+                <ns2:waypoint x="1013.0" y="223.0"/>
+                <ns2:waypoint x="1064.0" y="223.0"/>
+            </ns3:BPMNEdge>
+            <ns3:BPMNShape bpmnElement="_19_0_1_b0e02e4_1550749030636_652046_13303" id="_19_0_1_b0e02e4_1550749033553_20923_13424">
+                <ns4:Bounds x="973.0" y="203.0" width="40.0" height="40.0"/>
+            </ns3:BPMNShape>
+        </ns3:BPMNPlane>
+    </ns3:BPMNDiagram>
+</definitions>
